@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Serenity - Yoga & Life Coaching",
+  title: "Yoga Website",
   description: "Transform your life through yoga, meditation, hypnosis, NLP, and Wing Chun. Discover inner peace and wellness.",
   keywords: "yoga, meditation, hypnosis, NLP, Wing Chun, life coaching, wellness, mindfulness",
   authors: [{ name: "Serenity Wellness Center" }],
   openGraph: {
-    title: "Serenity - Yoga & Life Coaching",
+    title: "Yoga Website",
     description: "Transform your life through holistic wellness practices",
     type: "website",
   },
