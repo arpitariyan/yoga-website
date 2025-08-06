@@ -1,0 +1,84 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Development Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "group": "build",
+      "isBackground": true,
+      "presentation": {
+        "clear": false,
+        "echo": true,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "always",
+        "showReuseMessage": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build for Production",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "clear": true,
+        "echo": true,
+        "focus": true,
+        "panel": "shared",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Production Server",
+      "type": "shell",
+      "command": "npm",
+      "args": ["start"],
+      "group": "build",
+      "dependsOn": "Build for Production",
+      "presentation": {
+        "clear": false,
+        "echo": true,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "Lint Code",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "group": "test",
+      "presentation": {
+        "clear": true,
+        "echo": true,
+        "focus": true,
+        "panel": "shared",
+        "reveal": "always"
+      },
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "group": "build",
+      "presentation": {
+        "clear": true,
+        "echo": true,
+        "focus": true,
+        "panel": "shared",
+        "reveal": "always"
+      }
+    }
+  ]
+}
